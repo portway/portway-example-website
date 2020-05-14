@@ -6,5 +6,13 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-source-portway',
+      options: {
+        token: process.env.PORTWAY_TOKEN,
+        projectId: 56
+      }
+    }
+  ]
 }

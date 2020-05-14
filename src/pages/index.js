@@ -1,5 +1,6 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
+import marked from 'marked'
 
 const Body = ({ data }) => {
   const { allPortwayProject, allPortwayDocument } = data

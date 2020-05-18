@@ -16,7 +16,7 @@ module.exports = {
       resolve: 'gatsby-source-portway',
       options: {
         token: process.env.PORTWAY_TOKEN,
-        projectId: 56
+        projectId: process.env.PORTWAY_PROJECT_ID
       }
     }
   ]

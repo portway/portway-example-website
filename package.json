@@ -16,7 +16,7 @@
   "dependencies": {
     "gatsby": "^2.21.22",
     "gatsby-plugin-sass": "^2.3.1",
-    "gatsby-source-portway": "git+https://github.com/BonkeyBong/gatsby-source-portway.git",
+    "gatsby-source-portway": "git+https://github.com/portway/gatsby-source-portway.git",
     "marked": "^1.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",

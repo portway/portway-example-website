@@ -1,0 +1,48 @@
+.header {
+  --header-link-color: rgba(255, 255, 255, .9);
+  align-items: center;
+  background-color: hsl(17, 93%, 65%);
+  color: rgba(255, 255, 255, .9);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header a, .header a:visited {
+  color: var(--header-link-color);
+}
+.header a:hover {
+  color: var(--header-link-color);
+}
+.header a:active, .header a:focus {
+  color: var(--header-link-color);
+}
+
+.header__title a {
+  color: var(--header-link-color);
+  font-size: 2.4rem;
+  text-decoration: none;
+}
+
+.header__navigation {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__navigation-item {
+  margin-left: 1rem;
+}
+
+.header__navigation-item a {
+  color: var(--header-link-color);
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.header__navigation-item a[aria-current="page"] {
+  color: rgba(255, 255, 255, .6);
+  text-decoration: none;
+}

@@ -1,0 +1,26 @@
+/*
+  Page CSS file for sample site
+  Imported by ./src/pages/page.js
+*/
+
+/* .page {} */
+
+.page__header {
+  background: hsl(0, 0%, 98%);
+  padding: 1rem;
+}
+
+.page__meta {
+  font-size: 1.4rem;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.page__container {
+  display: flex;
+  padding: 2.5rem 1rem;
+}
+
+.page__body {
+  flex: 1 0 65%;
+}

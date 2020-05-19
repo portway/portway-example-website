@@ -11,7 +11,6 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-source-portway',
       options: {

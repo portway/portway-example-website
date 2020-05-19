@@ -13,7 +13,7 @@ This example application will pull down data from a portway project and display 
 ## Running the app
 `gatsby develop`
 
-The app will display portway documents as blog posts.
+The app will display portway documents as web pages.
 
 ## Details
 

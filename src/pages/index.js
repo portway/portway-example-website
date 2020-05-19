@@ -31,13 +31,13 @@ const Body = ({ data }) => {
 }
 
 const renderPost = (document) => {
-  const fields = document.childrenPortwayField
+  const fields = document.children
   const authorNameField = fields.find(field => field.type === FIELD_TYPES.STRING && field.name === AUTHOR_NAME_FIELD)
   const authorAvatarField = fields.find(field => field.type === FIELD_TYPES.IMAGE && field.name === AUTHOR_AVATAR_FIELD)
   return (
     <div key={document.id} >
       <h2>{document.name}</h2>
-      {fieldsList(document.childrenPortwayField)}
+      {fieldsList(fields)}
       Author:
       {authorNameField && (<p key={authorNameField.id}>{authorNameField.value}</p>)}
       {authorAvatarField && (
@@ -85,30 +85,36 @@ const fieldsList = (fields) => {
 }
 
 export const query = graphql`
-  {
-    allPortwayDocument(sort: {fields: lastPublishedAt, order: DESC}) {
+  query portwayQuery {
+    allPortwayDocument {
       nodes {
-        createdAt
-        id
-        name
+        children {
+          id
+          ... on PortwayField {
+            id
+            name
+            order
+            structuredValue {
+              type
+              tag
+            }
+            type
+            uid
+            updatedAt
+            value
+            versionId
+            createdAt
+            documentId
+          }
+        }
+        lastPublishedAt
+        projectId
+        publishedVersionId
         uid
         updatedAt
-        childrenPortwayField {
-          id
-          createdAt
-          documentId
-          name
-          order
-          structuredValue {
-            type
-            tag
-          }
-          type
-          uid
-          updatedAt
-          value
-          versionId
-        }
+        name
+        id
+        createdAt
       }
     }
     allPortwayProject {

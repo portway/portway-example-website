@@ -1,4 +1,4 @@
-# Portway Tweet Logger
+# Portway Example Blog
 
 This example application will pull down data from a portway project and display it on a blog site.
 

@@ -86,7 +86,7 @@ const fieldsList = (fields) => {
 
 export const query = graphql`
   query portwayQuery {
-    allPortwayDocument {
+    allPortwayDocument(sort: {order: DESC, fields: lastPublishedAt}) {
       nodes {
         children {
           id
